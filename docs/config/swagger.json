@@ -1,0 +1,443 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "lab-09",
+    "description": "LAB-09 - Classes, Inheritance, Functional Programming",
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "url": "https://lab-09-joejemmely.herokuapp.com"
+    }
+  ],
+  "paths": {
+    "/api/v1/teams": {
+      "get": {
+        "tags": ["teams"],
+        "description": "Get all teams",
+        "responses": {
+          "200": {
+            "description": "Auto generated using Swagger Inspector",
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "$ref": "#/components/schemas/Teams"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": ["teams"],
+        "description": "Add a new team",
+        "requestBody": {
+          "content": {
+            "application/json; charset=utf-8": {
+              "schema": {
+                "$ref": "#/components/schemas/Teams"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "$ref": "#/components/schemas/Teams"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/teams/5ce7186b0d868f0017ec1dbc": {
+      "get": {
+        "tags": ["teams"],
+        "description": "Get a team by id",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "$ref": "#/components/schemas/Teams"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": ["teams"],
+        "description": "Modify a team",
+        "requestBody": {
+          "content": {
+            "application/json; charset=utf-8": {
+              "schema": {
+                "$ref": "#/components/schemas/Teams"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "$ref": "#/components/schemas/Teams"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": ["teams"],
+        "description": "Remove a team",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "$ref": "#/components/schemas/Teams"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/players": {
+      "get": {
+        "tags": ["players"],
+        "description": "Get players",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "$ref": "#/components/schemas/Players"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": ["players"],
+        "description": "Auto generated using Swagger Inspector",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Player"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Auto generated using Swagger Inspector",
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "$ref": "#/components/schemas/Player"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/players/5ce717bf0d868f0017ec1dba/": {
+      "get": {
+        "tags": ["players"],
+        "description": "Auto generated using Swagger Inspector",
+        "responses": {
+          "200": {
+            "description": "Auto generated using Swagger Inspector",
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "type": "string"
+                },
+                "examples": {}
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": ["players"],
+        "description": "Auto generated using Swagger Inspector",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/body_2"
+              },
+              "examples": {
+                "0": {
+                  "value": "{\n    \"name\":\"Joe\",\n    \"bats\":\"R\",\n    \"throws\":\"R\",\n    \"position\":\"C\",\n    \"team\":\"Bunnies\"\n}"
+                },
+                "1": {
+                  "value": "{\n    \"name\":\"Joe\",\n    \"bats\":\"R\",\n    \"throws\":\"R\",\n    \"position\":\"C\",\n    \"team\":\"Bunnies\"\n}"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Auto generated using Swagger Inspector",
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "type": "string"
+                },
+                "examples": {}
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": ["players"],
+        "description": "Auto generated using Swagger Inspector",
+        "responses": {
+          "200": {
+            "description": "Auto generated using Swagger Inspector",
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "type": "string"
+                },
+                "examples": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/categories": {
+      "get": {
+        "tags": ["categories"],
+        "description": "Auto generated using Swagger Inspector",
+        "responses": {
+          "200": {
+            "description": "Auto generated using Swagger Inspector",
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "type": "string"
+                },
+                "examples": {}
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": ["categories"],
+        "description": "Auto generated using Swagger Inspector",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/body_3"
+              },
+              "examples": {
+                "0": {
+                  "value": "{\n    \"name\":\"Joe\"\n}"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Auto generated using Swagger Inspector",
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "type": "string"
+                },
+                "examples": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/categories/38c8e654-8134-459e-8940-039bcb444fb2": {
+      "get": {
+        "tags": ["categories"],
+        "description": "Auto generated using Swagger Inspector",
+        "responses": {
+          "200": {
+            "description": "Auto generated using Swagger Inspector",
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "type": "string"
+                },
+                "examples": {}
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": ["categories"],
+        "description": "Auto generated using Swagger Inspector",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/body_4"
+              },
+              "examples": {
+                "0": {
+                  "value": "{\n    \"name\":\"Something else\"\n}"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "500": {
+            "description": "Auto generated using Swagger Inspector",
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "type": "string"
+                },
+                "examples": {}
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": ["categories"],
+        "description": "Auto generated using Swagger Inspector",
+        "responses": {
+          "200": {
+            "description": "Auto generated using Swagger Inspector",
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "type": "string"
+                },
+                "examples": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Teams": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "name": {
+            "type": "string"
+          }
+        }
+      },
+      "Categories": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "name": {
+            "type": "string"
+          }
+        }
+      },
+      "Player": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "name": {
+            "type": "string"
+          },
+          "position": {
+            "type": "string"
+          },
+          "throw": {
+            "type": "string"
+          },
+          "bats": {
+            "type": "string"
+          },
+          "team": {
+            "type": "string"
+          }
+        }
+      },
+      "body": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          }
+        }
+      },
+      "body_1": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          }
+        }
+      },
+      "body_2": {
+        "type": "object",
+        "properties": {
+          "bats": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "position": {
+            "type": "string"
+          },
+          "team": {
+            "type": "string"
+          },
+          "throws": {
+            "type": "string"
+          }
+        }
+      },
+      "body_3": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          }
+        }
+      },
+      "body_4": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
