@@ -11,10 +11,6 @@
 
 #### Documentation
 
-- [api docs](https://lab-09-joejemmely.herokuapp.com/api/v1/doc/) (API servers)
-  - The swagger documentation doesn't reflect the :model parameter because in this particular case, the routes are not created automatically when a new model is created. The users reading the api doc wants to know what routes to use and what they return. The :model parameter do not matter for them. It would be different if they were able to create new routes through the api.
-- [jsdoc](https://lab-09-joejemmely.herokuapp.com/doc/) (Server assignments)
-
 ### Setup
 
 #### `.env` requirements
