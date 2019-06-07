@@ -54,7 +54,13 @@ function handleGetAll(request, response, next) {
       });
       response.status(200).json(output);
     })
-    .catch(next);
+    .catch(error => {
+      QClient.publish('database', events.database.ERROR, {
+        message: 'Something went horribly wrong',
+        error,
+      });
+      next(error);
+    });
 }
 
 function handleGetOne(request, response, next) {
@@ -67,7 +73,13 @@ function handleGetOne(request, response, next) {
       });
       return response.status(200).json(result[0]);
     })
-    .catch(next);
+    .catch(error => {
+      QClient.publish('database', events.database.ERROR, {
+        message: 'Something went horribly wrong',
+        error,
+      });
+      next(error);
+    });
 }
 
 function handlePost(request, response, next) {
@@ -80,7 +92,13 @@ function handlePost(request, response, next) {
       });
       return response.status(200).json(result);
     })
-    .catch(next);
+    .catch(error => {
+      QClient.publish('database', events.database.ERROR, {
+        message: 'Something went horribly wrong',
+        error,
+      });
+      next(error);
+    });
 }
 
 function handlePut(request, response, next) {
@@ -93,7 +111,13 @@ function handlePut(request, response, next) {
       });
       return response.status(200).json(result);
     })
-    .catch(next);
+    .catch(error => {
+      QClient.publish('database', events.database.ERROR, {
+        message: 'Something went horribly wrong',
+        error,
+      });
+      next(error);
+    });
 }
 
 function handleDelete(request, response, next) {
@@ -106,7 +130,13 @@ function handleDelete(request, response, next) {
       });
       return response.status(200).json(result);
     })
-    .catch(next);
+    .catch(error => {
+      QClient.publish('database', events.database.ERROR, {
+        message: 'Something went horribly wrong',
+        error,
+      });
+      next(error);
+    });
 }
 
 module.exports = router;
