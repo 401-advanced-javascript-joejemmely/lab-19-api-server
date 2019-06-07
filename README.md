@@ -50,4 +50,4 @@ database
 
 #### UML
 
-![UML](https://www.lucidchart.com/publicSegments/view/e6779e94-928c-42f8-8ca4-ea1cd81b73e4/image.png)
+![UML](./uml.jpg)
